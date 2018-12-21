@@ -23,7 +23,8 @@ class App extends Component {
     };
     setTimeout(()=>{
       this.setState({
-        instructor: this.state.instructors[Math.floor(Math.random()*3)].hobbies.pop(),
+        instructor: this.state.instructors[Math.floor(Math.random()*3)].hobbies.pop(),//this is not pure function as it is
+                                                                                  //modifing the array, NEVER use it in Production code
       });
     },5000);
   }
